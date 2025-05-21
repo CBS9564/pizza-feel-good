@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza Palace</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('order') }}">Order</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2025 Pizza Palace</p>
+    </footer>
+</body>
+</html>

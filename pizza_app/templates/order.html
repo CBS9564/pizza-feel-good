@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Place Your Order</h1>
+    <form method="POST" action="{{ url_for('order') }}">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+            <label for="pizza_id">Choose your pizza:</label>
+            <select id="pizza_id" name="pizza_id" required>
+                <option value="">--Please choose an option--</option>
+                {% if pizzas %}
+                    {% for pizza in pizzas %}
+                        <option value="{{ pizza.id }}">{{ pizza.name }} (${{ "%.2f"|format(pizza.price) }})</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+        </div>
+        <div>
+            <button type="submit">Place Order</button>
+        </div>
+    </form>
+{% endblock %}

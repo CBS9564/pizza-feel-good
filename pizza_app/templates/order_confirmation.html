@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Order Confirmation</h1>
+    
+    {% if details and details.name %}
+        <h2>Thank you for your order, {{ details.name }}!</h2>
+        <p>Your delicious {{ details.pizza_name }} is on its way.</p>
+        
+        <h3>Delivery Details:</h3>
+        <p><strong>Address:</strong> {{ details.address }}</p>
+        <p><strong>Phone:</strong> {{ details.phone }}</p>
+        
+        <h3>Order Summary:</h3>
+        <p><strong>Pizza:</strong> {{ details.pizza_name }}</p>
+        <p><strong>Price:</strong> ${{ "%.2f"|format(details.pizza_price) }}</p>
+        
+        <p>We appreciate your business!</p>
+    {% else %}
+        <p>We couldn't retrieve your order details. Please try ordering again or contact support.</p>
+    {% endif %}
+    
+    <p><a href="{{ url_for('index') }}">Back to Menu</a></p>
+    
+{% endblock %}

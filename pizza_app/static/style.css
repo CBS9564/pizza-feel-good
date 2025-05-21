@@ -1,0 +1,152 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3 {
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Pizza Menu (index.html) */
+#pizza-menu-placeholder ul,
+main ul { /* General list styling for menu */
+    list-style: none;
+    padding: 0;
+}
+
+#pizza-menu-placeholder li,
+main ul li { /* General list item styling for menu */
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+main ul li h3 {
+    margin-top: 0;
+}
+
+/* Order Form (order.html) */
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important to include padding and border in the element's total width and height */
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+button,
+a[href*="order"] { /* Targeting "Order Now" links as well */
+    display: inline-block;
+    background: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+button:hover,
+a[href*="order"]:hover {
+    background: #4cae4c;
+}
+
+/* Order Confirmation (order_confirmation.html) */
+.confirmation-details p {
+    margin-bottom: 0.5rem;
+}
+
+.confirmation-details h3 {
+    margin-top: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+}
